@@ -1,0 +1,77 @@
+@import "abstract";
+
+.green-division {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  padding: 0 5em 0 5em;
+  width: 50vw;
+  background-color: #3399ff;
+  @include respond(small-phone) {
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 10px;
+    width: auto;
+  }
+  @include respond(phone) {
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 10px;
+    width: auto;
+  }
+
+  @include respond(tab-port) {
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 20px;
+  }
+  @include respond(tab-land) {
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 20px;
+  }
+}
+
+.white-division {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  padding: 0 5em 0 5em;
+  width: 50vw;
+  background-color: rgb(255, 255, 255);
+
+  @include respond(small-phone) {
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 5px;
+    width: auto;
+  }
+  @include respond(phone) {
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 20px;
+    width: auto;
+  }
+  @include respond(tab-port) {
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 20px;
+  }
+  @include respond(tab-land) {
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 20px;
+  }
+}

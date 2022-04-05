@@ -1,0 +1,393 @@
+/*
+
+0 - 600px :               Phone
+600 - 900px :             Tablet portrait
+900 - 1200px :            Tablet landscape
+[1200 to 1800] :          is where our normal style allpy
+1800px + :                For the big desktop
+
+$breakpoint arguments choises
+
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+1em =16px
+
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 93.75%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  min-height: 100vh;
+  padding: 10px;
+  background-color: #d9d9d9;
+}
+
+.navbar {
+  display: none;
+}
+@media only screen and (max-width: 21.87em) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+/* CHECKBOX HACK */
+input[type=checkbox] {
+  display: none;
+}
+
+/*HAMBURGER MENU*/
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    background-color: teal;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+  }
+
+  .menu li:hover {
+    display: inline-block;
+    background-color: #4c9e9e;
+    transition: 0.3s ease;
+  }
+
+  .menu li + li {
+    margin-top: 12px;
+  }
+
+  input[type=checkbox]:checked ~ .menu {
+    display: block;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .dropdown {
+    left: 50%;
+    top: 30px;
+    transform: translateX(35%);
+  }
+
+  .dropdown li:hover {
+    background-color: #4c9e9e;
+  }
+}
+/*
+
+0 - 600px :               Phone
+600 - 900px :             Tablet portrait
+900 - 1200px :            Tablet landscape
+[1200 to 1800] :          is where our normal style allpy
+1800px + :                For the big desktop
+
+$breakpoint arguments choises
+
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+1em =16px
+
+*/
+.green-division {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  padding: 0 5em 0 5em;
+  width: 50vw;
+  background-color: #3399ff;
+}
+@media only screen and (max-width: 21.87em) {
+  .green-division {
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 10px;
+    width: auto;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .green-division {
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 10px;
+    width: auto;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .green-division {
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 20px;
+  }
+}
+@media only screen and (max-width: 75em) {
+  .green-division {
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 20px;
+  }
+}
+
+.white-division {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  padding: 0 5em 0 5em;
+  width: 50vw;
+  background-color: rgb(255, 255, 255);
+}
+@media only screen and (max-width: 21.87em) {
+  .white-division {
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 5px;
+    width: auto;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .white-division {
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 20px;
+    width: auto;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .white-division {
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 20px;
+  }
+}
+@media only screen and (max-width: 75em) {
+  .white-division {
+    display: block;
+    height: auto;
+    margin: 0;
+    padding: 20px;
+  }
+}
+
+/*
+
+0 - 600px :               Phone
+600 - 900px :             Tablet portrait
+900 - 1200px :            Tablet landscape
+[1200 to 1800] :          is where our normal style allpy
+1800px + :                For the big desktop
+
+$breakpoint arguments choises
+
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+1em =16px
+
+*/
+.container {
+  display: flex;
+}
+@media only screen and (max-width: 21.87em) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .container {
+    display: flex;
+    height: auto;
+  }
+}
+.container .sub-container {
+  display: flex;
+}
+
+.primary-heading {
+  font-size: 2.2em;
+  font-weight: 800;
+  color: rgb(255, 255, 255);
+}
+@media only screen and (max-width: 21.87em) {
+  .primary-heading {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .primary-heading {
+    font-size: 1.5em;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .primary-heading {
+    font-size: 1.8em;
+  }
+}
+
+.secondary-heading {
+  font-size: 2em;
+}
+@media only screen and (max-width: 21.87em) {
+  .secondary-heading {
+    font-size: 1em;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .secondary-heading {
+    font-size: 1.2em;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .secondary-heading {
+    font-size: 1.5em;
+  }
+}
+
+.primary-content {
+  padding: 1em 0 3em 0;
+  color: rgb(255, 255, 255);
+}
+@media only screen and (max-width: 21.87em) {
+  .primary-content {
+    font-size: 0.8em;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .primary-content {
+    font-size: 0.8em;
+  }
+}
+
+@media only screen and (max-width: 21.87em) {
+  .seceondary-content {
+    font-size: 0.5em;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .seceondary-content {
+    font-size: 0.7em;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  .seceondary-content {
+    font-size: 0.9em;
+  }
+}
+
+.icon-description {
+  color: rgb(255, 255, 255);
+}
+@media only screen and (max-width: 21.87em) {
+  .icon-description {
+    font-size: 0.8em;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .icon-description {
+    font-size: 0.8em;
+  }
+}
+
+.icon {
+  display: flex;
+  align-self: center;
+  padding: 0 1em 0 0;
+  height: 1.5em;
+}
+@media only screen and (max-width: 21.87em) {
+  .icon {
+    height: 1em;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .icon {
+    height: 1em;
+  }
+}
+
+.icon-lock,
+.icon-search {
+  filter: invert(100%);
+}
+
+.sub-container {
+  padding-bottom: 1.5em;
+}
+
+/*
+
+0 - 600px :               Phone
+600 - 900px :             Tablet portrait
+900 - 1200px :            Tablet landscape
+[1200 to 1800] :          is where our normal style allpy
+1800px + :                For the big desktop
+
+$breakpoint arguments choises
+
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+1em =16px
+
+*/
+
+/*# sourceMappingURL=style.css.map */

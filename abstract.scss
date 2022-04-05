@@ -1,0 +1,58 @@
+//MEDIA QUERY MANAGER
+/*
+
+0 - 600px :               Phone
+600 - 900px :             Tablet portrait
+900 - 1200px :            Tablet landscape
+[1200 to 1800] :          is where our normal style allpy
+1800px + :                For the big desktop
+
+$breakpoint arguments choises
+
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+1em =16px
+
+*/
+
+// "em" is best relative unit for media query.
+@mixin respond($breakpoint) {
+  //For small phone
+  @if $breakpoint==small-phone {
+    //"only screen" condition allows to apply media rules only on device screen \
+    //If someone try to print this page it will not work
+    @media only screen and(max-width: 21.87em) {
+      @content;
+    } //350px
+  }
+
+  @if $breakpoint==phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    } //600px
+  }
+
+  //For portrait tablet
+  @if $breakpoint==tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    } //900px
+  }
+
+  //For landscape tablet
+  @if $breakpoint==tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    } //1200px
+  }
+
+  //For big desktop
+  @if $breakpoint==big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    } //1800px
+  }
+}

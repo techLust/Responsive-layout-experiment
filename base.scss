@@ -1,0 +1,91 @@
+@import "abstract";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 93.75%; // 1rem = 10px, 10px/16px = 62.5%
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  min-height: 100vh;
+  padding: 10px;
+  background-color: #d9d9d9;
+}
+
+.navbar {
+  display: none;
+  @include respond(small-phone) {
+    display: flex;
+    justify-content: space-between;
+  }
+  @include respond(phone) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // @include respond(tab-port) {
+  //   display: none;
+  // }
+  // @include respond(tab-land) {
+  //   display: none;
+  // }
+  // @include respond(big-desktop) {
+  //   display: none;
+  // }
+}
+/* CHECKBOX HACK */
+input[type="checkbox"] {
+  display: none;
+}
+/*HAMBURGER MENU*/
+.hamburger {
+  display: none;
+  font-size: 24px;
+  user-select: none;
+}
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    background-color: teal;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 16px 0;
+  }
+  .menu li:hover {
+    display: inline-block;
+    background-color: #4c9e9e;
+    transition: 0.3s ease;
+  }
+  .menu li + li {
+    margin-top: 12px;
+  }
+  input[type="checkbox"]:checked ~ .menu {
+    display: block;
+  }
+  .hamburger {
+    display: block;
+  }
+  .dropdown {
+    left: 50%;
+    top: 30px;
+    transform: translateX(35%);
+  }
+  .dropdown li:hover {
+    background-color: #4c9e9e;
+  }
+}
